@@ -16,6 +16,12 @@
     display: flex;
 
 }
+
+.card-link .cardCenter {
+    display: flex;
+    align-items: center;
+}
+
 /* #feature-one iframe {
     border: 0;
     width: 100%;

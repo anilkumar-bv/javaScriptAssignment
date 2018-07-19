@@ -1,4 +1,3 @@
-
 // function to get Parameter by Name
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -10,17 +9,12 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-var searchButton = document.getElementById('search');
-
-// Filter event
-searchButton.addEventListener('click', filterItems);
-
 // query string: ?movieFilter=filter
 var collection = getParameterByName('collection');
 var span = document.getElementById('searchFilterText');
 if (collection)
     span.innerHTML = '<em>' + collection + '</em>';
-//var url = "https://api.themoviedb.org/3/search/movie?api_key=8ea0aad7a07343596262232e43a21cda&language=en-US&query=" + filter + "&page=1&include_adult=false";
+
 var urlForUserCollections = "http://localhost:3000/userCollections";
 console.log(urlForUserCollections);
 
@@ -76,7 +70,7 @@ function processResponse(responseText) {
                 imgTag.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + movie.poster_path;
                 imgTag.alt = movie.title;
                 var anchorTag = document.createElement('a');
-                anchorTag.href = '../src/movie.html?movieId=' + movie.id;
+                anchorTag.href = '../src/movie.html?movieId=' + movie.id + '&source=userCollection';
                 anchorTag.appendChild(imgTag);
                 var pTag = document.createElement('p');
                 if (movie.overview.length > 100)

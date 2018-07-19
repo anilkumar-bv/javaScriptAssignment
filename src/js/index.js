@@ -73,7 +73,7 @@ function processResponseForPopular(responseText) {
             var descriptionTag = document.createElement('p');
             var anchorTag = document.createElement('a');
             //anchorTag.href = 'https://api.themoviedb.org/3/movie/' + movie.id +'?api_key=8ea0aad7a07343596262232e43a21cda&language=en-US';
-            anchorTag.href = '../src/movie.html?movieId=' + movie.id;
+            anchorTag.href = '../src/movie.html?movieId=' + movie.id + '&source=popular';
             //anchorTag.textContent = movie.title;
 
             h3.textContent = movie.title;
@@ -153,7 +153,7 @@ function processResponseForUserCollections(responseText) {
             var descriptionTag = document.createElement('p');
             var anchorTag = document.createElement('a');
             //anchorTag.href = 'https://api.themoviedb.org/3/movie/' + movie.id +'?api_key=8ea0aad7a07343596262232e43a21cda&language=en-US';
-            anchorTag.href = '../src/movie.html?movieId=' + movie.id;
+            anchorTag.href = '../src/movie.html?movieId=' + movie.id + '&source=userCollections';
             //anchorTag.textContent = movie.title;
 
             h3.textContent = movie.title;
