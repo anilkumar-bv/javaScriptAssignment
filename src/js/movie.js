@@ -20,7 +20,7 @@ var filter = getParameterByName('movieId');
 var source = getParameterByName('source');
 var url;
 
-if (source === 'popular')
+if (source === 'popular' || source === 'search')
     url = 'https://api.themoviedb.org/3/movie/' + filter + '?api_key=8ea0aad7a07343596262232e43a21cda&language=en-US&page=1';
 else
     url = 'http://localhost:3000/userCollections/' + filter;

@@ -71,7 +71,7 @@ function processResponse(responseText) {
             imgTag.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + movie.poster_path;
             imgTag.alt = movie.title;
             var anchorTag = document.createElement('a');
-            anchorTag.href = '../src/movie.html?movieId=' + movie.id;
+            anchorTag.href = '../src/movie.html?movieId=' + movie.id + '&source=search';
             anchorTag.appendChild(imgTag);
             var pTag = document.createElement('p');
             if (movie.overview.length > 100)

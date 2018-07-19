@@ -18,19 +18,18 @@
           <h1 id="header-title">Movies Lister</h1>
         </div>
         <div class="col-md-6 align-self-center">
-          <input type="text" class="form-control" id="filter" placeholder="Search Movies...">
-          <button type="button" class="btn btn-dark" id="search">Search</button>
+          <div class="input-group">
+            <input type="text" class="form-control" id="filter" placeholder="Search Movies...">
+            <span class="input-group-button">
+              <button type="button" class="btn btn-dark" id="search">Search</button>
+            </span>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <div class="container">
     <div id="main" class="card card-body">
-      <h2 class="title">Add Movie</h2>
-      <form id="addForm" class="form-inline mb-3">
-        <input type="text" class="form-control mr-2" id="item">
-        <input type="submit" class="btn btn-dark" value="Submit">
-      </form>
       <h2 class="title">Search Results for:
         <span id="searchFilterText"></span>
       </h2>
