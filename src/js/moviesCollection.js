@@ -52,8 +52,10 @@ function processResponse(responseText) {
             <div class="card">
                 <div class="card-body" id="movie1">
                     <h5 class="card-title">Most Popular</h5>
-                    <img src="" alt />
-                    <p>Movie One</p>
+                    <a href="">
+                        <img src="" alt="" />
+                    </a>
+                    <p>Movie Description</p>
                 </div>
             </div>
             */
